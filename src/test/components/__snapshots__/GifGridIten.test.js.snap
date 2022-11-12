@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en <GifGridItem /> debe mostrar el commponente correctamente 1`] = `
+<div
+  className="card animate__animated animate__backInLeft"
+>
+  <img />
+  <p />
+</div>
+`;
