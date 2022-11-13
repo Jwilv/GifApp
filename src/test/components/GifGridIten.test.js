@@ -13,8 +13,13 @@ describe('pruebas en <GifGridItem />', () => {
     })
 
     test('debe de tener un parrafo con el title', () => {
-        const p =  wraper.find('p')
+        const p = wraper.find('p')
         expect(p.text().trim()).toBe(title)
+    });
+    test('la img debe tener el url y el title de los props', () => {
+        const img = wraper.find('img')
+        expect(img.prop('src')).toBe(url)
+        expect(img.prop('alt')).toBe(title)
     });
 
 })
