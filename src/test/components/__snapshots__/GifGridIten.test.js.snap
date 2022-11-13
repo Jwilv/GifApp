@@ -4,7 +4,12 @@ exports[`pruebas en <GifGridItem /> debe mostrar el commponente correctamente 1`
 <div
   className="card animate__animated animate__backInLeft"
 >
-  <img />
-  <p />
+  <img
+    alt="soy un titulo"
+    src="htpps://localhost/test"
+  />
+  <p>
+    soy un titulo
+  </p>
 </div>
 `;
