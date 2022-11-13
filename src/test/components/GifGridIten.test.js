@@ -1,17 +1,20 @@
 import React from 'react'
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
 import { GifGridItem } from '../../components/GifGridItem'
 
 describe('pruebas en <GifGridItem />', () => {
+
+    const title = 'soy un titulo'
+    const url = 'htpps://localhost/test'
+    const wraper = shallow(<GifGridItem title={title} url={url} />)
+
     test('debe mostrar el commponente correctamente', () => {
-
-        const title = 'soy un titulo'
-        const url ='htpps://localhost/test'
-
-        const wraper = shallow(<GifGridItem title={title} url={url} />)
-
         expect(wraper).toMatchSnapshot()
-
     })
+
+    test('debe de tener un parrafo con el title', () => {
+        const p =  wraper.find('p')
+        expect(p.text().trim()).toBe(title)
+    });
 
 })
