@@ -22,4 +22,10 @@ describe('pruebas en <GifGridItem />', () => {
         expect(img.prop('alt')).toBe(title)
     });
 
-})
+    test('el div debe tener la className asignada', () => {
+        const estilo = wraper.find('div');
+        const className = estilo.prop('className')
+        expect(className.includes('card animate__animated animate__backInLeft')).toBe(true)
+    });
+
+}) 
