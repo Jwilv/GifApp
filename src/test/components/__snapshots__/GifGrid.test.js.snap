@@ -1,57 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`pruebas en <GifGrid /> debe de mostrar items cuando se cargan imagenes useFetchGifs 1`] = `
+<Fragment>
+  <h2
+    className="animate__animated animate__backInLeft"
+  >
+    batman
+  </h2>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="abc"
+      key="abc"
+      title="cualquier titulo"
+      url="https://localhosto/cualquier/cosa"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`pruebas en <GifGrid /> debe de mostrarse correctamente 1`] = `
-<Fragment>
-  <h2
-    className="animate__animated animate__backInLeft"
-  >
-    batman
-  </h2>
-  <div
-    className="card-grid"
-  >
-    <p>
-      loading...
-    </p>
-  </div>
-</Fragment>
-`;
-
-exports[`pruebas en <GifGrid />> debe de mostrarse correctamente 1`] = `
-<Fragment>
-  <h2
-    className="animate__animated animate__backInLeft"
-  >
-    batman
-  </h2>
-  <div
-    className="card-grid"
-  >
-    <p>
-      loading...
-    </p>
-  </div>
-</Fragment>
-`;
-
-exports[`pruebas en <GifGrid debe de mostrarse correctamente 1`] = `
-<Fragment>
-  <h2
-    className="animate__animated animate__backInLeft"
-  >
-    batman
-  </h2>
-  <div
-    className="card-grid"
-  >
-    <p>
-      loading...
-    </p>
-  </div>
-</Fragment>
-`;
-
-exports[`pruebas en GifGrid debe de mostrarse correctamente 1`] = `
 <Fragment>
   <h2
     className="animate__animated animate__backInLeft"
