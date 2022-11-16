@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
-export const GifExperApp = () => {
-  const [categories, setCategories] = useState([]);
+export const GifExperApp = ({defaultCategorie = []}) => {
+  const [categories, setCategories] = useState( defaultCategorie );
 
   return (
     <>
