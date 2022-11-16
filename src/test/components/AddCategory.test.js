@@ -5,10 +5,13 @@ import { AddCategory } from '../../components/AddCategory';
 describe('test de <AddCategory />', () => {
 
     const setCategories = jest.fn()
-    let wrapper = shallow(<AddCategory setCategories={setCategories} />)
+    const value = 'hola mundo'
+
+    let wrapper = shallow(<AddCategory setCategories={setCategories} />);
+
     beforeEach(()=>{
         jest.clearAllMocks();
-        wrapper = shallow(<AddCategory setCategories={setCategories} />)
+        wrapper = shallow(<AddCategory setCategories={setCategories} />);
     })
 
     test('debe mostrarase correctamente', () => {
@@ -17,14 +20,20 @@ describe('test de <AddCategory />', () => {
 
     test('debe de cambiar la caja de texto', () => {
         const inptu = wrapper.find('input')
-        const value = 'hola mundo'
         inptu.simulate('change', { target: { value } })
         const output = wrapper.find('p').text();
         expect(value).toBe(output);
     });
 
     test('NO debe poster la informacion con submit', () => {
-        wrapper.find('form').simulate('submit',{preventDefault(){}})
+        wrapper.find('form').simulate('submit',{ preventDefault(){} })
         expect( setCategories ).not.toHaveBeenCalled();
+    });
+
+    test('debe llamar a setCatgories y limpiar la caja de texto', () => {
+        wrapper.find('input').simulate('change',{target:{value}})
+        wrapper.find('form').simulate('submit',{ preventDefault(){} })
+        expect(setCategories).toHaveBeenCalled();
+        expect(wrapper.find('input').prop('value')).toBe('')
     });
 });
