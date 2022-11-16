@@ -34,6 +34,7 @@ describe('test de <AddCategory />', () => {
         wrapper.find('input').simulate('change',{target:{value}})
         wrapper.find('form').simulate('submit',{ preventDefault(){} })
         expect(setCategories).toHaveBeenCalled();
+        expect(setCategories).toHaveBeenCalledWith( expect.any(Function));
         expect(wrapper.find('input').prop('value')).toBe('')
     });
 });
