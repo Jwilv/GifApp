@@ -4,10 +4,11 @@ exports[`test de <AddCategory /> debe mostrarase correctamente 1`] = `
 <form
   onSubmit={[Function]}
 >
+  <p />
   <input
     onChange={[Function]}
     type="text"
-    value="Buscar en Gifs App"
+    value=""
   />
 </form>
 `;
